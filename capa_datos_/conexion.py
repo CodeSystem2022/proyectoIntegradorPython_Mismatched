@@ -5,7 +5,7 @@ from logger_base import log
 
 
 class Conexion:
-    _DATABASE = 'new_bd'
+    _DATABASE = 'testing_bd'
     _USERNAME = 'postgres'
     _PASSWORD = 'root'
     _DB_PORT = '5432'
@@ -45,4 +45,20 @@ class Conexion:
                 sys.exit()
         else:
             return cls._pool
-        
+
+    @classmethod
+    def liberarConexion(cls,conexion):
+        cls.obtenerPool().putconn(conexion)
+        log.debug(f'Regresamos la conexion del pool: {conexion}')
+
+    @classmethod
+    def cerrarConexiones(cls):
+        cls.obtenerPool().closeall()
+
+if __name__ == '__main__':
+    conexion1 = Conexion.obtenerConexion()
+    Conexion.liberarConexion(conexion1)
+    # conexion2 = Conexion.obtenerConexion()
+    # conexion3 = Conexion.obtenerConexion()
+    # conexion4 = Conexion.obtenerConexion()
+    # conexion5 = Conexion.obtenerConexion()

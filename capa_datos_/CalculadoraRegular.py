@@ -1,7 +1,7 @@
 from logger_base import log
 
 class CalculadoraRegular:
-    def __init__(self, id_calculo_regular, numero_ingresado, resultado):
+    def __init__(self, id_calculo_regular=None, numero_ingresado=None, resultado=None):
         self._id_calculo_regular = id_calculo_regular
         self._numero_ingresado = numero_ingresado
         self._resultado = resultado
