@@ -118,3 +118,110 @@
         Numero Ingresado: -569*96,
         Resultado: -54624
         
+08:06:37 PM:DEBUG [cursor_del_pool.py:11] Inicio del método with y __enter__
+08:06:37 PM:DEBUG [conexion.py:41] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x00000258AF4FDFC0>
+08:06:37 PM:DEBUG [conexion.py:23] Conexión obtenida del pool: <connection object at 0x00000258AF4F06A0; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+08:06:38 PM:DEBUG [calculadoraRegularDao.py:30] Calculo Regular Insertado: 
+        id_calculo_regular: None,
+        Numero Ingresado: -569*96,
+        Resultado: -54624
+        
+08:06:38 PM:DEBUG [cursor_del_pool.py:17] Se ejecuta el metodo exit
+08:06:38 PM:DEBUG [cursor_del_pool.py:23] Commit de la transaccion 
+08:06:38 PM:DEBUG [conexion.py:52] Regresamos la conexion del pool: <connection object at 0x00000258AF4F06A0; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+08:06:38 PM:DEBUG [calculadoraRegularDao.py:46] Calculo ingresado : 1
+08:06:38 PM:DEBUG [cursor_del_pool.py:11] Inicio del método with y __enter__
+08:06:38 PM:DEBUG [conexion.py:23] Conexión obtenida del pool: <connection object at 0x00000258AF4F06A0; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+08:06:38 PM:DEBUG [cursor_del_pool.py:17] Se ejecuta el metodo exit
+08:06:38 PM:DEBUG [cursor_del_pool.py:23] Commit de la transaccion 
+08:06:38 PM:DEBUG [conexion.py:52] Regresamos la conexion del pool: <connection object at 0x00000258AF4F06A0; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+08:06:38 PM:DEBUG [calculadoraRegularDao.py:51] 
+        id_calculo_regular: 7,
+        Numero Ingresado: -569*96,
+        Resultado: -54624
+        
+08:06:38 PM:DEBUG [calculadoraRegularDao.py:51] 
+        id_calculo_regular: 8,
+        Numero Ingresado: -569*96,
+        Resultado: -54624
+        
+08:06:35 PM:DEBUG [cursor_del_pool.py:11] Inicio del método with y __enter__
+08:06:35 PM:DEBUG [conexion.py:41] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x00000173B9AEE020>
+08:06:35 PM:DEBUG [conexion.py:23] Conexión obtenida del pool: <connection object at 0x00000173B9AE06A0; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+08:06:35 PM:DEBUG [calculadoraRegularDao.py:30] Calculo Regular Insertado: 
+        id_calculo_regular: None,
+        Numero Ingresado: 5,
+        Resultado: 20
+        
+08:06:35 PM:DEBUG [cursor_del_pool.py:17] Se ejecuta el metodo exit
+08:06:35 PM:DEBUG [cursor_del_pool.py:23] Commit de la transaccion 
+08:06:35 PM:DEBUG [conexion.py:52] Regresamos la conexion del pool: <connection object at 0x00000173B9AE06A0; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+08:06:35 PM:DEBUG [calculadoraRegularDao.py:63] Calculo ingresado : 1
+08:06:35 PM:DEBUG [cursor_del_pool.py:11] Inicio del método with y __enter__
+08:06:35 PM:DEBUG [conexion.py:23] Conexión obtenida del pool: <connection object at 0x00000173B9AE06A0; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+08:06:35 PM:DEBUG [cursor_del_pool.py:17] Se ejecuta el metodo exit
+08:06:35 PM:DEBUG [cursor_del_pool.py:23] Commit de la transaccion 
+08:06:35 PM:DEBUG [conexion.py:52] Regresamos la conexion del pool: <connection object at 0x00000173B9AE06A0; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+08:06:35 PM:DEBUG [calculadoraRegularDao.py:68] 
+        id_calculo_regular: 7,
+        Numero Ingresado: -569*96,
+        Resultado: -54624
+        
+08:06:35 PM:DEBUG [calculadoraRegularDao.py:68] 
+        id_calculo_regular: 8,
+        Numero Ingresado: -569*96,
+        Resultado: -54624
+        
+08:06:35 PM:DEBUG [calculadoraRegularDao.py:68] 
+        id_calculo_regular: 9,
+        Numero Ingresado: 5,
+        Resultado: 20
+        
+08:06:15 PM:DEBUG [cursor_del_pool.py:11] Inicio del método with y __enter__
+08:06:15 PM:DEBUG [conexion.py:41] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x000002791336DE10>
+08:06:15 PM:DEBUG [conexion.py:23] Conexión obtenida del pool: <connection object at 0x00000279133606A0; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+08:06:15 PM:DEBUG [calculadoraRegularDao.py:30] Calculo Regular Insertado: 
+        id_calculo_regular: 85*2,
+        Numero Ingresado: 170.0,
+        Resultado: None
+        
+08:06:15 PM:DEBUG [cursor_del_pool.py:17] Se ejecuta el metodo exit
+08:06:15 PM:DEBUG [cursor_del_pool.py:23] Commit de la transaccion 
+08:06:15 PM:DEBUG [conexion.py:52] Regresamos la conexion del pool: <connection object at 0x00000279133606A0; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+08:06:03 PM:DEBUG [calculadoraRegularService.py:19] 125+2
+08:06:03 PM:DEBUG [calculadoraRegularService.py:20] 127.0
+08:06:03 PM:DEBUG [cursor_del_pool.py:11] Inicio del método with y __enter__
+08:06:03 PM:DEBUG [conexion.py:41] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x000002271633A020>
+08:06:03 PM:DEBUG [conexion.py:23] Conexión obtenida del pool: <connection object at 0x00000227163306A0; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+08:06:03 PM:DEBUG [calculadoraRegularDao.py:30] Calculo Regular Insertado: 
+        id_calculo_regular: 125+2,
+        Numero Ingresado: 127.0,
+        Resultado: None
+        
+08:06:03 PM:DEBUG [cursor_del_pool.py:17] Se ejecuta el metodo exit
+08:06:03 PM:DEBUG [cursor_del_pool.py:23] Commit de la transaccion 
+08:06:03 PM:DEBUG [conexion.py:52] Regresamos la conexion del pool: <connection object at 0x00000227163306A0; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+08:06:02 PM:DEBUG [calculadoraRegularService.py:19] 125+9
+08:06:02 PM:DEBUG [calculadoraRegularService.py:20] 134.0
+08:06:02 PM:DEBUG [cursor_del_pool.py:11] Inicio del método with y __enter__
+08:06:02 PM:DEBUG [conexion.py:41] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x00000209441EA050>
+08:06:02 PM:DEBUG [conexion.py:23] Conexión obtenida del pool: <connection object at 0x00000209441E06A0; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+08:06:02 PM:DEBUG [calculadoraRegularDao.py:30] Calculo Regular Insertado: 
+        id_calculo_regular: None,
+        Numero Ingresado: 125+9,
+        Resultado: 134.0
+        
+08:06:02 PM:DEBUG [cursor_del_pool.py:17] Se ejecuta el metodo exit
+08:06:02 PM:DEBUG [cursor_del_pool.py:23] Commit de la transaccion 
+08:06:02 PM:DEBUG [conexion.py:52] Regresamos la conexion del pool: <connection object at 0x00000209441E06A0; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+09:06:38 PM:DEBUG [cursor_del_pool.py:11] Inicio del método with y __enter__
+09:06:38 PM:DEBUG [conexion.py:41] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x000001A0C341A2F0>
+09:06:38 PM:DEBUG [conexion.py:23] Conexión obtenida del pool: <connection object at 0x000001A0C4D5C6A0; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+09:06:38 PM:DEBUG [calculadoraRegularDao.py:30] Calculo Regular Insertado: 
+        id_calculo_regular: None,
+        Numero Ingresado: 25*96,
+        Resultado: 2400.0
+        
+09:06:38 PM:DEBUG [cursor_del_pool.py:17] Se ejecuta el metodo exit
+09:06:38 PM:DEBUG [cursor_del_pool.py:23] Commit de la transaccion 
+09:06:38 PM:DEBUG [conexion.py:52] Regresamos la conexion del pool: <connection object at 0x000001A0C4D5C6A0; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>

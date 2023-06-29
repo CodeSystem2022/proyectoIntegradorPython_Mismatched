@@ -39,13 +39,30 @@ class CalculadoraRegularDAO:
             return cursor.rowcount
 
 
-if __name__ == '__main__':
+# if __name__ == '__main__':
+#     # Insertar un registro
+#     calculadoraRegular1 = CalculadoraRegular(numero_ingresado="-569*96", resultado="-54624")
+#     calculos_insertados = CalculadoraRegularDAO.insertar(calculadoraRegular1)
+#     log.debug(f'Calculo ingresado : {calculos_insertados}')
+#
+#     # Seleccionar objetos
+#     calculadoras_regulares = CalculadoraRegularDAO.seleccionar()
+#     for calculadora_regular in calculadoras_regulares:
+#         log.debug(calculadora_regular)
+
+# if __name__ == '__main__':
+    # Obtener los datos del usuario
+    # numero_ingresado = input("Ingrese el número: ")
+    # resultado = input("Ingrese el resultado: ")
+
+    # Crear una instancia de CalculadoraRegular con los datos ingresados
+    # calculadoraRegular1 = CalculadoraRegular(numero_ingresado=numero_ingresado, resultado=resultado)
+
     # Insertar un registro
-    calculadoraRegular1 = CalculadoraRegular(numero_ingresado="-569*96", resultado="-54624")
-    calculos_insertados = CalculadoraRegularDAO.insertar(calculadoraRegular1)
-    log.debug(f'Calculo ingresado : {calculos_insertados}')
+    # calculos_insertados = CalculadoraRegularDAO.insertar(calculadoraRegular1)
+    # log.debug(f'Calculo ingresado : {calculos_insertados}')
 
     # Seleccionar objetos
-    calculadoras_regulares = CalculadoraRegularDAO.seleccionar()
-    for calculadora_regular in calculadoras_regulares:
-        log.debug(calculadora_regular)
+    # calculadoras_regulares = CalculadoraRegularDAO.seleccionar()
+    # for calculadora_regular in calculadoras_regulares:
+    #     log.debug(calculadora_regular)
