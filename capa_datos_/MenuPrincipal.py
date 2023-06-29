@@ -1,10 +1,10 @@
 from capa_datos_.CalculadoraRegular import CalculadoraRegular
-from capa_datos_.calculadoraRegularService import CalculadoraRegularService
 
 
 class MenuPrincipal:
     @staticmethod
     def menuPrincipal():
+        from capa_datos_.calculadoraRegularService import CalculadoraRegularService  # Importación tardía
         cr = CalculadoraRegularService()
         # cm = CalculadoraMatrices()
         # cf = CalculadoraFisica()
@@ -26,9 +26,10 @@ class MenuPrincipal:
         #     ce.menuEdad()
         # elif opcion == "4":
         #     cm.menuMatrices()
-        # elif opcion == "5":
-        #     import sys
-        #     sys.exit(0)
+        elif opcion == "5":
+            import sys
+            sys.exit(0)
+
 
 if __name__ == '__main__':
     MenuPrincipal.menuPrincipal()
