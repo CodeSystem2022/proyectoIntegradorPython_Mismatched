@@ -62,6 +62,7 @@ class CalculadoraEdadService:   # Creamos la clase
         if dias_restantes < 0:
             cumpleanios_proximo_anio = fecha_nacimiento.replace(year=hoy.year + 1)   # Se reemplaza el año y se agrega 1
             dias_restantes = (cumpleanios_proximo_anio - hoy).days
+
         return edad, meses, dias, dias_restantes
 
     # Para mostrar el resultado del cálculo
