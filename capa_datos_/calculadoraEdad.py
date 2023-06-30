@@ -1,76 +1,90 @@
-from logger_base import log
+from datetime import date
 
 
-class CalculadoraEdad:
-    def __init__(self, id_calculo_edad=None, nombre_apellido=None, diaNac=None, mesNac=None, añoNac=None,
-                 edad_actual=None):
-        self._id_calculo_edad = id_calculo_edad
-        self._nombre_apellido = nombre_apellido
-        self._diaNac = diaNac
-        self._mesNac = mesNac
-        self._añoNac = añoNac
-        self._edad_actual = edad_actual
+class CalculadoraEdad:   # Creamos la clase
+    def __init__(self):
+        self.combinacionNA = None
+        self.nombre = ""
+        self.apellido = ""
+        self.dia = 0
+        self.mes = 0
+        self.anio = 0
 
-    def __str__(self):
-        return f'''
-        id_calculo_edad: {self._id_calculo_edad}
-        nombre_apellido: {self._nombre_apellido}
-        diaNac:          {self._diaNac}
-        mesNac:          {self._mesNac}
-        añoNac:          {self._añoNac}
-        edad_actual:     {self._edad_actual}
-        '''
+    # Menu
+    def menuCalculadoraEdad(self):
+        print("Calculadora de Edad")
+        print("--------------------")
+        self.nombre = input("Ingrese su nombre: ")
+        self.apellido = input("Ingrese su apellido: ")
+        self.combinacionNA = self.nombre + (" ") + self.apellido
+        print(self.combinacionNA)
+        print("--------------------")
+        self.dia = int(input("Ingresa tu día de nacimiento: "))
+        self.mes = int(input("Ingresa tu mes de nacimiento: "))
+        self.anio = int(input("Ingresa tu año de nacimiento: "))
 
-    # Getters and Setters
-    @property
-    def id_calculo_edad(self):
-        return self._id_calculo_edad
+    # Metodo para calcular la edad
+    def calcular_edad(self):
+        hoy = date.today()   # Se usa datetime para identificar la fecha actual
+        fecha_nacimiento = date(self.anio, self.mes, self.dia)
+        edad = hoy.year - fecha_nacimiento.year
 
-    @id_calculo_edad.setter
-    def id_calculo_edad(self, id_calculo_edad):
-        self._id_calculo_edad = id_calculo_edad
+        # Verificamos si el cumpleaños ya ha pasado este año
+        if (hoy.month, hoy.day) < (fecha_nacimiento.month, fecha_nacimiento.day):
+            edad -= 1   # Si el dia y mes de hoy, es menor al mes y dia de nacimiento, se le resta uno (Para poder expresarlo en meses y dias)
 
-    @property
-    def nombre_apellido(self):
-        return self._nombre_apellido
+        # Calculamos el cumpleaños
+        cumpleanios = fecha_nacimiento.replace(year=hoy.year)
+        dias_restantes = (cumpleanios - hoy).days
 
-    @nombre_apellido.setter
-    def nombre_apellido(self, nombre_apellido):
-        self._nombre_apellido = nombre_apellido
+        # Si la fecha actual es mayor a la fecha de nacimiento:
+        if hoy.month > fecha_nacimiento.month:
+            meses = hoy.month - fecha_nacimiento.month
+            dias = hoy.day - fecha_nacimiento.day
 
-    @property
-    def diaNac(self):
-        return self._diaNac
+        # Si el mes actual es menor al mes de nacimiento:
+        elif hoy.month < fecha_nacimiento.month:
+            meses = hoy.month + 12 - fecha_nacimiento.month   # Se calculan los meses
+            dias = hoy.day - fecha_nacimiento.day   # Se calcula los dias
 
-    @diaNac.setter
-    def diaNac(self, diaNac):
-        self._diaNac = diaNac
+        # Si el dia actual es mayor o igual al dia de la fecha de nacimiento:
+        elif hoy.day >= fecha_nacimiento.day:
+            meses = 0
+            dias = hoy.day - fecha_nacimiento.day   # Se calculan los dias
 
-    @property
-    def mesNac(self):
-        return self._mesNac
+        # Si no se cumple ninguna de las condiciones:
+        else:
+            meses = 11
+            dias = hoy.day + 30 - fecha_nacimiento.day
 
-    @mesNac.setter
-    def mesNac(self, mesNac):
-        self._mesNac = mesNac
+        # Si los dias son negativos, se le resta 1 mes (para agregarle dias en vez de meses), se convierte a positivo y se ajusta la fecha
+        if dias < 0:
+            meses -= 1
+            dias *= -1
+            dias += 30 - dias
 
-    @property
-    def añoNac(self):
-        return self._añoNac
+        # Se ajustan los dias restantes en caso de que el cumpleaños ya haya pasado
+        if dias_restantes < 0:
+            cumpleanios_proximo_anio = fecha_nacimiento.replace(year=hoy.year + 1)   # Se reemplaza el año y se agrega 1
+            dias_restantes = (cumpleanios_proximo_anio - hoy).days
 
-    @añoNac.setter
-    def añoNac(self, añoNac):
-        self._añoNac = añoNac
+        return edad, meses, dias, dias_restantes
 
-    @property
-    def edad_actual(self):
-        return self._edad_actual
+    # Para mostrar el resultado del cálculo
+    def mostrar_resultado(self, edad, meses, dias, dias_restantes):
+        if dias_restantes == 0:   #
+            print(f"\n¡Feliz cumpleaños, {self.nombre}!")
+            print(f"¡Hoy cumpliste {edad} años!")
+        else:
+            print(f"\nTu edad es: {edad} años, {meses} meses y {dias} días.")
+            print(f"Faltan {dias_restantes} días para tu próximo cumpleaños.")
 
-    @edad_actual.setter
-    def edad_actual(self, edad_actual):
-        self._edad_actual = edad_actual
+    def ingresar_datos(self):
+        self.menuCalculadoraEdad()
+        edad, meses, dias, dias_restantes = self.calcular_edad()
+        self.mostrar_resultado(edad, meses, dias, dias_restantes)
 
 
 if __name__ == '__main__':
-    calculadoraEdad1 = CalculadoraEdad(0, "Santiago Martos", 6, 2, 2003, edad_actual=f"20 años, 7 meses, 15 dias, ")
-    log.debug(calculadoraEdad1)
+    calculadora = CalculadoraEdad()
+    calculadora.ingresar_datos()
