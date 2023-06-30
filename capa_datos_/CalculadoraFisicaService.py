@@ -1,4 +1,6 @@
 from capa_datos_.MenuPrincipal import MenuPrincipal
+
+
 class CalculadoraFisica:
     def menuFisica(self):
         opcion = input("-----------------------------------\n"
