@@ -4,3 +4,253 @@
         Numero Ingresado: 52,
         Tipo Dato Ingresado: Hola
         
+08:07:16 PM:DEBUG [cursor_del_pool.py:11] Inicio del método with y __enter__
+08:07:16 PM:DEBUG [conexion.py:41] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x000001A906CF74C0>
+08:07:16 PM:DEBUG [conexion.py:23] Conexión obtenida del pool: <connection object at 0x000001A906DD8E10; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+08:07:16 PM:DEBUG [cursor_del_pool.py:17] Se ejecuta el metodo exit
+08:07:16 PM:DEBUG [cursor_del_pool.py:20] Ocurrió una exception: column "dianac" of relation "calculadoras_edades" does not exist
+LINE 1: INSERT INTO CALCULADORAS_EDADES(nombre_apellido, diaNac, mes...
+                                                         ^
+
+08:07:16 PM:DEBUG [conexion.py:52] Regresamos la conexion del pool: <connection object at 0x000001A906DD8E10; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+08:07:23 PM:DEBUG [cursor_del_pool.py:11] Inicio del método with y __enter__
+08:07:23 PM:DEBUG [conexion.py:41] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x00000211BB566DD0>
+08:07:23 PM:DEBUG [conexion.py:23] Conexión obtenida del pool: <connection object at 0x00000211BB630E10; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+08:07:23 PM:DEBUG [cursor_del_pool.py:17] Se ejecuta el metodo exit
+08:07:23 PM:DEBUG [cursor_del_pool.py:20] Ocurrió una exception: null value in column "id_calculo_edad" of relation "calculadoras_edades" violates not-null constraint
+DETAIL:  Failing row contains (null, 20 años, 7 meses, 15 dias., 6, 6, 2003, 20 años, 7 meses, 15 dias.).
+
+08:07:23 PM:DEBUG [conexion.py:52] Regresamos la conexion del pool: <connection object at 0x00000211BB630E10; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+08:07:13 PM:DEBUG [cursor_del_pool.py:11] Inicio del método with y __enter__
+08:07:13 PM:DEBUG [conexion.py:41] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x000001D68D2D6DA0>
+08:07:13 PM:DEBUG [conexion.py:23] Conexión obtenida del pool: <connection object at 0x000001D68D370E10; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+08:07:13 PM:DEBUG [cursor_del_pool.py:17] Se ejecuta el metodo exit
+08:07:13 PM:DEBUG [cursor_del_pool.py:20] Ocurrió una exception: null value in column "id_calculo_edad" of relation "calculadoras_edades" violates not-null constraint
+DETAIL:  Failing row contains (null, 20 años, 7 meses, 15 dias., 6, 6, 2003, 20 años, 7 meses, 15 dias.).
+
+08:07:13 PM:DEBUG [conexion.py:52] Regresamos la conexion del pool: <connection object at 0x000001D68D370E10; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+08:07:10 PM:DEBUG [cursor_del_pool.py:11] Inicio del método with y __enter__
+08:07:10 PM:DEBUG [conexion.py:41] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x00000164EE7E6DA0>
+08:07:10 PM:DEBUG [conexion.py:23] Conexión obtenida del pool: <connection object at 0x00000164EE880E10; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+08:07:10 PM:DEBUG [cursor_del_pool.py:17] Se ejecuta el metodo exit
+08:07:10 PM:DEBUG [cursor_del_pool.py:20] Ocurrió una exception: null value in column "id_calculo_edad" of relation "calculadoras_edades" violates not-null constraint
+DETAIL:  Failing row contains (null, 20 años, 7 meses, 15 dias., 6, 6, 2003, 20 años, 7 meses, 15 dias.).
+
+08:07:10 PM:DEBUG [conexion.py:52] Regresamos la conexion del pool: <connection object at 0x00000164EE880E10; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+08:07:05 PM:DEBUG [cursor_del_pool.py:11] Inicio del método with y __enter__
+08:07:05 PM:DEBUG [conexion.py:41] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x000002AD22816DA0>
+08:07:05 PM:DEBUG [conexion.py:23] Conexión obtenida del pool: <connection object at 0x000002AD228ACE10; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+08:07:05 PM:DEBUG [cursor_del_pool.py:17] Se ejecuta el metodo exit
+08:07:05 PM:DEBUG [cursor_del_pool.py:20] Ocurrió una exception: null value in column "id_calculo_edad" of relation "calculadoras_edades" violates not-null constraint
+DETAIL:  Failing row contains (null, 20 años, 7 meses, 15 dias., 6, 6, 2003, 20 años, 7 meses, 15 dias.).
+
+08:07:05 PM:DEBUG [conexion.py:52] Regresamos la conexion del pool: <connection object at 0x000002AD228ACE10; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+08:07:35 PM:DEBUG [cursor_del_pool.py:11] Inicio del método with y __enter__
+08:07:35 PM:DEBUG [conexion.py:41] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x00000109FF5C6DA0>
+08:07:35 PM:DEBUG [conexion.py:23] Conexión obtenida del pool: <connection object at 0x00000109FF65CE10; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+08:07:35 PM:DEBUG [cursor_del_pool.py:17] Se ejecuta el metodo exit
+08:07:35 PM:DEBUG [cursor_del_pool.py:20] Ocurrió una exception: null value in column "id_calculo_edad" of relation "calculadoras_edades" violates not-null constraint
+DETAIL:  Failing row contains (null, Santiago Martos, 6, 6, 2003, 20 años, 7 meses, 15 dias.).
+
+08:07:35 PM:DEBUG [conexion.py:52] Regresamos la conexion del pool: <connection object at 0x00000109FF65CE10; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+08:07:57 PM:DEBUG [cursor_del_pool.py:11] Inicio del método with y __enter__
+08:07:57 PM:DEBUG [conexion.py:41] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x0000021FE13174C0>
+08:07:57 PM:DEBUG [conexion.py:23] Conexión obtenida del pool: <connection object at 0x0000021FE13D4E10; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+08:07:57 PM:DEBUG [calculadoraEdadDao.py:30] Calculo Edad insertado: 
+        id_calculo_edad: None
+        nombre_apellido: Santiago Martos
+        diaNac:          6
+        mesNac:          6
+        añoNac:          2003
+        edad_actual:     20 años, 7 meses, 15 dias.
+        
+08:07:57 PM:DEBUG [cursor_del_pool.py:17] Se ejecuta el metodo exit
+08:07:57 PM:DEBUG [cursor_del_pool.py:23] Commit de la transaccion 
+08:07:57 PM:DEBUG [conexion.py:52] Regresamos la conexion del pool: <connection object at 0x0000021FE13D4E10; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+08:07:57 PM:DEBUG [calculadoraEdadDao.py:39] Calculo ingresado: 1
+08:07:03 PM:DEBUG [cursor_del_pool.py:11] Inicio del método with y __enter__
+08:07:03 PM:DEBUG [conexion.py:41] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x00000195A5867AC0>
+08:07:03 PM:DEBUG [conexion.py:23] Conexión obtenida del pool: <connection object at 0x00000195A590CE10; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+08:07:03 PM:DEBUG [cursor_del_pool.py:17] Se ejecuta el metodo exit
+08:07:03 PM:DEBUG [cursor_del_pool.py:23] Commit de la transaccion 
+08:07:03 PM:DEBUG [conexion.py:52] Regresamos la conexion del pool: <connection object at 0x00000195A590CE10; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+08:07:03 PM:DEBUG [calculadoraEdadDao.py:42] 
+        id_calculo_edad: 16
+        nombre_apellido: Santiago Martos
+        diaNac:          6
+        mesNac:          6
+        añoNac:          2003
+        edad_actual:     20 años, 7 meses, 15 dias.
+        
+08:07:16 PM:DEBUG [cursor_del_pool.py:11] Inicio del método with y __enter__
+08:07:16 PM:DEBUG [conexion.py:41] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x000001BE1C0FE9B0>
+08:07:16 PM:DEBUG [conexion.py:23] Conexión obtenida del pool: <connection object at 0x000001BE1A6C0F20; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+08:07:16 PM:DEBUG [cursor_del_pool.py:17] Se ejecuta el metodo exit
+08:07:16 PM:DEBUG [cursor_del_pool.py:20] Ocurrió una exception: null value in column "id_calculo_fisica" of relation "calculadoras_fisicas" violates not-null constraint
+DETAIL:  Failing row contains (null, 895, CTMR).
+
+08:07:16 PM:DEBUG [conexion.py:52] Regresamos la conexion del pool: <connection object at 0x000001BE1A6C0F20; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+08:07:42 PM:DEBUG [cursor_del_pool.py:11] Inicio del método with y __enter__
+08:07:42 PM:DEBUG [conexion.py:41] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x000001F6957F0820>
+08:07:42 PM:DEBUG [conexion.py:23] Conexión obtenida del pool: <connection object at 0x000001F693D74F20; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+08:07:42 PM:DEBUG [cursor_del_pool.py:17] Se ejecuta el metodo exit
+08:07:42 PM:DEBUG [cursor_del_pool.py:23] Commit de la transaccion 
+08:07:42 PM:DEBUG [conexion.py:52] Regresamos la conexion del pool: <connection object at 0x000001F693D74F20; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+08:07:53 PM:DEBUG [cursor_del_pool.py:11] Inicio del método with y __enter__
+08:07:53 PM:DEBUG [conexion.py:41] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x000001D3BF40C970>
+08:07:53 PM:DEBUG [conexion.py:23] Conexión obtenida del pool: <connection object at 0x000001D3BD9B4F20; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+08:07:53 PM:DEBUG [CalculadoraFisicaDAO.py:27] Calculo Fisico Insertado: 
+        id_calculo_fisica: None,
+        Numero Ingresado: 895,
+        Tipo Dato Ingresado: CTMR
+        
+08:07:53 PM:DEBUG [cursor_del_pool.py:17] Se ejecuta el metodo exit
+08:07:53 PM:DEBUG [cursor_del_pool.py:23] Commit de la transaccion 
+08:07:53 PM:DEBUG [conexion.py:52] Regresamos la conexion del pool: <connection object at 0x000001D3BD9B4F20; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+08:07:35 PM:DEBUG [cursor_del_pool.py:11] Inicio del método with y __enter__
+08:07:35 PM:DEBUG [conexion.py:41] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x0000024BFFAEC970>
+08:07:35 PM:DEBUG [conexion.py:23] Conexión obtenida del pool: <connection object at 0x0000024BFF4A4F20; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+08:07:35 PM:DEBUG [CalculadoraFisicaDAO.py:27] Calculo Fisico Insertado: 
+        id_calculo_fisica: None,
+        Numero Ingresado: 895,
+        Tipo Dato Ingresado: CTMR
+        
+08:07:35 PM:DEBUG [cursor_del_pool.py:17] Se ejecuta el metodo exit
+08:07:35 PM:DEBUG [cursor_del_pool.py:23] Commit de la transaccion 
+08:07:35 PM:DEBUG [conexion.py:52] Regresamos la conexion del pool: <connection object at 0x0000024BFF4A4F20; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+08:07:35 PM:DEBUG [CalculadoraFisicaDAO.py:33] Calculo ingresado: 1
+08:07:27 PM:DEBUG [cursor_del_pool.py:11] Inicio del método with y __enter__
+08:07:27 PM:DEBUG [conexion.py:41] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x00000200D172C970>
+08:07:27 PM:DEBUG [conexion.py:23] Conexión obtenida del pool: <connection object at 0x00000200CFCD4F20; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+08:07:27 PM:DEBUG [CalculadoraFisicaDAO.py:27] Calculo Fisico Insertado: 
+        id_calculo_fisica: None,
+        Numero Ingresado: 895,
+        Tipo Dato Ingresado: CTMR
+        
+08:07:27 PM:DEBUG [cursor_del_pool.py:17] Se ejecuta el metodo exit
+08:07:27 PM:DEBUG [cursor_del_pool.py:23] Commit de la transaccion 
+08:07:27 PM:DEBUG [conexion.py:52] Regresamos la conexion del pool: <connection object at 0x00000200CFCD4F20; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+08:07:27 PM:DEBUG [CalculadoraFisicaDAO.py:33] Calculo ingresado: 1
+08:07:20 PM:DEBUG [cursor_del_pool.py:11] Inicio del método with y __enter__
+08:07:20 PM:DEBUG [conexion.py:41] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x0000025CF05ACD00>
+08:07:20 PM:DEBUG [conexion.py:23] Conexión obtenida del pool: <connection object at 0x0000025CEEB54F20; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+08:07:20 PM:DEBUG [cursor_del_pool.py:17] Se ejecuta el metodo exit
+08:07:20 PM:DEBUG [cursor_del_pool.py:23] Commit de la transaccion 
+08:07:20 PM:DEBUG [conexion.py:52] Regresamos la conexion del pool: <connection object at 0x0000025CEEB54F20; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+08:07:20 PM:DEBUG [CalculadoraFisicaDAO.py:39] 
+        id_calculo_fisica: 17,
+        Numero Ingresado: 895.0,
+        Tipo Dato Ingresado: CTMR
+        
+08:07:20 PM:DEBUG [CalculadoraFisicaDAO.py:39] 
+        id_calculo_fisica: 18,
+        Numero Ingresado: 895.0,
+        Tipo Dato Ingresado: CTMR
+        
+08:07:20 PM:DEBUG [CalculadoraFisicaDAO.py:39] 
+        id_calculo_fisica: 19,
+        Numero Ingresado: 895.0,
+        Tipo Dato Ingresado: CTMR
+        
+08:07:20 PM:DEBUG [CalculadoraFisicaDAO.py:39] 
+        id_calculo_fisica: 20,
+        Numero Ingresado: 895.0,
+        Tipo Dato Ingresado: CTMR
+        
+09:07:06 PM:DEBUG [cursor_del_pool.py:11] Inicio del método with y __enter__
+09:07:07 PM:DEBUG [conexion.py:41] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x000002137A7C3100>
+09:07:07 PM:DEBUG [conexion.py:23] Conexión obtenida del pool: <connection object at 0x0000021378F3CF20; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+09:07:07 PM:DEBUG [CalculadoraFisicaDAO.py:27] Calculo Fisico Insertado: 
+        id_calculo_fisica: None,
+        Numero Ingresado: 256.0,
+        Tipo Dato Ingresado: Volumen
+        
+09:07:07 PM:DEBUG [cursor_del_pool.py:17] Se ejecuta el metodo exit
+09:07:07 PM:DEBUG [cursor_del_pool.py:23] Commit de la transaccion 
+09:07:07 PM:DEBUG [conexion.py:52] Regresamos la conexion del pool: <connection object at 0x0000021378F3CF20; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+09:07:24 PM:DEBUG [cursor_del_pool.py:11] Inicio del método with y __enter__
+09:07:24 PM:DEBUG [conexion.py:41] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x000001E25FCC29B0>
+09:07:24 PM:DEBUG [conexion.py:23] Conexión obtenida del pool: <connection object at 0x000001E25E43D250; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+09:07:24 PM:DEBUG [CalculadoraFisicaDAO.py:27] Calculo Fisico Insertado: 
+        id_calculo_fisica: None,
+        Numero Ingresado: 256.0,
+        Tipo Dato Ingresado: Volumen
+        
+09:07:24 PM:DEBUG [cursor_del_pool.py:17] Se ejecuta el metodo exit
+09:07:24 PM:DEBUG [cursor_del_pool.py:23] Commit de la transaccion 
+09:07:24 PM:DEBUG [conexion.py:52] Regresamos la conexion del pool: <connection object at 0x000001E25E43D250; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+09:07:19 PM:DEBUG [cursor_del_pool.py:11] Inicio del método with y __enter__
+09:07:19 PM:DEBUG [conexion.py:41] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x0000014476B729B0>
+09:07:19 PM:DEBUG [conexion.py:23] Conexión obtenida del pool: <connection object at 0x00000144752AD250; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+09:07:19 PM:DEBUG [CalculadoraFisicaDAO.py:27] Calculo Fisico Insertado: 
+        id_calculo_fisica: None,
+        Numero Ingresado: 256.0,
+        Tipo Dato Ingresado: Volumen
+        
+09:07:19 PM:DEBUG [cursor_del_pool.py:17] Se ejecuta el metodo exit
+09:07:19 PM:DEBUG [cursor_del_pool.py:23] Commit de la transaccion 
+09:07:19 PM:DEBUG [conexion.py:52] Regresamos la conexion del pool: <connection object at 0x00000144752AD250; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+09:07:00 PM:DEBUG [cursor_del_pool.py:11] Inicio del método with y __enter__
+09:07:00 PM:DEBUG [conexion.py:41] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x0000025DF15729B0>
+09:07:00 PM:DEBUG [conexion.py:23] Conexión obtenida del pool: <connection object at 0x0000025DEFCED250; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+09:07:00 PM:DEBUG [CalculadoraFisicaDAO.py:27] Calculo Fisico Insertado: 
+        id_calculo_fisica: None,
+        Numero Ingresado: 2656.0,
+        Tipo Dato Ingresado: Volumen
+        
+09:07:00 PM:DEBUG [cursor_del_pool.py:17] Se ejecuta el metodo exit
+09:07:00 PM:DEBUG [cursor_del_pool.py:23] Commit de la transaccion 
+09:07:00 PM:DEBUG [conexion.py:52] Regresamos la conexion del pool: <connection object at 0x0000025DEFCED250; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+09:07:39 PM:DEBUG [cursor_del_pool.py:11] Inicio del método with y __enter__
+09:07:39 PM:DEBUG [conexion.py:41] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x0000021ADA248A00>
+09:07:39 PM:DEBUG [conexion.py:23] Conexión obtenida del pool: <connection object at 0x0000021AD87A1250; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+09:07:39 PM:DEBUG [CalculadoraFisicaDAO.py:27] Calculo Fisico Insertado: 
+        id_calculo_fisica: None,
+        Numero Ingresado: 25664.0,
+        Tipo Dato Ingresado: Volumen
+        
+09:07:39 PM:DEBUG [cursor_del_pool.py:17] Se ejecuta el metodo exit
+09:07:39 PM:DEBUG [cursor_del_pool.py:23] Commit de la transaccion 
+09:07:39 PM:DEBUG [conexion.py:52] Regresamos la conexion del pool: <connection object at 0x0000021AD87A1250; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+09:07:02 PM:DEBUG [cursor_del_pool.py:11] Inicio del método with y __enter__
+09:07:02 PM:DEBUG [conexion.py:41] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x000001D3707AA350>
+09:07:02 PM:DEBUG [conexion.py:23] Conexión obtenida del pool: <connection object at 0x000001D36ECC1470; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+09:07:02 PM:DEBUG [calculadoraEdadDao.py:30] Calculo Edad insertado: 
+        id_calculo_edad: None
+        nombre_apellido: Joel Lujan
+        diaNac:          30
+        mesNac:          11
+        anioNac:          1988
+        edad_actual:     34 años, 7 meses, 30 dias.
+        
+09:07:02 PM:DEBUG [cursor_del_pool.py:17] Se ejecuta el metodo exit
+09:07:02 PM:DEBUG [cursor_del_pool.py:23] Commit de la transaccion 
+09:07:02 PM:DEBUG [conexion.py:52] Regresamos la conexion del pool: <connection object at 0x000001D36ECC1470; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+09:07:21 PM:DEBUG [cursor_del_pool.py:11] Inicio del método with y __enter__
+09:07:21 PM:DEBUG [conexion.py:41] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x000002A1CFE3A350>
+09:07:21 PM:DEBUG [conexion.py:23] Conexión obtenida del pool: <connection object at 0x000002A1CE361470; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+09:07:21 PM:DEBUG [calculadoraEdadDao.py:30] Calculo Edad insertado: 
+        id_calculo_edad: None
+        nombre_apellido: Facu Rojas
+        diaNac:          17
+        mesNac:          11
+        anioNac:          1997
+        edad_actual:     25 años, 7 meses, 30 dias.
+        
+09:07:21 PM:DEBUG [cursor_del_pool.py:17] Se ejecuta el metodo exit
+09:07:21 PM:DEBUG [cursor_del_pool.py:23] Commit de la transaccion 
+09:07:21 PM:DEBUG [conexion.py:52] Regresamos la conexion del pool: <connection object at 0x000002A1CE361470; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+09:07:40 PM:DEBUG [cursor_del_pool.py:11] Inicio del método with y __enter__
+09:07:40 PM:DEBUG [conexion.py:41] Creación del pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x00000204CA75A350>
+09:07:40 PM:DEBUG [conexion.py:23] Conexión obtenida del pool: <connection object at 0x00000204C8C91470; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>
+09:07:40 PM:DEBUG [calculadoraEdadDao.py:30] Calculo Edad insertado: 
+        id_calculo_edad: None
+        nombre_apellido: Joel L
+        diaNac:          30
+        mesNac:          11
+        anioNac:          1988
+        edad_actual:     34 años, 7 meses, 30 dias.
+        
+09:07:40 PM:DEBUG [cursor_del_pool.py:17] Se ejecuta el metodo exit
+09:07:40 PM:DEBUG [cursor_del_pool.py:23] Commit de la transaccion 
+09:07:40 PM:DEBUG [conexion.py:52] Regresamos la conexion del pool: <connection object at 0x00000204C8C91470; dsn: 'user=postgres password=xxx dbname=testing_bd host=127.0.0.1 port=5432', closed: 0>

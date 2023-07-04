@@ -1,5 +1,4 @@
 from capa_datos_.CalculadoraRegular import CalculadoraRegular
-from capa_datos_.conexion import Conexion
 from capa_datos_.cursor_del_pool import CursorDelPool
 from logger_base import log
 

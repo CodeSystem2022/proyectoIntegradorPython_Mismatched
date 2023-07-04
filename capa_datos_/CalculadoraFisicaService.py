@@ -1,8 +1,10 @@
-from capa_datos_.MenuPrincipal import MenuPrincipal
+from capa_datos_.CalculadoraFisicaDAO import CalculadoraFisicaDAO
+from capa_datos_.CalculadoraFisica import CalculadoraFisica
 
 
-class CalculadoraFisica:
+class CalculadoraFisicaService:
     def menuFisica(self):
+        from capa_datos_.MenuPrincipal import MenuPrincipal  # Importación tardía
         opcion = input("-----------------------------------\n"
                         "CALCULADORA FÍSICA\n-----------------------------------\n"
                         "\n1: CALCULADORA VOLUMEN"
@@ -19,7 +21,10 @@ class CalculadoraFisica:
         if opcion == "4":
             MenuPrincipal.menuPrincipal()
 
+
     def cVolumen(self, entrada):
+
+        tipo_dato01 = "Volumen"
         opcion = input("ELIJA EL VOLUMEN INICIAL\n"
                         "\n"
                         "1: CENTIMETRO CUBICO [cm3]\n"
@@ -29,7 +34,7 @@ class CalculadoraFisica:
                         "5: DECILITRO [dL]\n"
                         "6: LITRO [lts]\n"
                         "7: GALON [gal]\n"
-                        "8: REGRESAR AL MENÚ PRINCIPAL\n"
+                        "8: REGRESAR A LA CALCULADORA DE FISICA \n"
                         "\nSeleccione una opcion: ")
 
         if opcion == "1":
@@ -41,7 +46,12 @@ class CalculadoraFisica:
             print("Decilitro: {} [dL]".format(cantidad / 100))
             print("Litro: {} [lts]".format(cantidad / 1000))
             print("Galon: {} [gal]".format(cantidad / 3785))
+
+            calculadoraFisica1 = CalculadoraFisica(numero_ingresado=cantidad, tipo_dato_ingresado=tipo_dato01)
+            calculo_insertado = CalculadoraFisicaDAO.insertar(calculadoraFisica1)
+
             input("PRESIONE ENTER PARA CONTINUAR\n")
+            self.menuFisica()
 
         elif opcion == "2":
             cantidad = float(input("Digite la cantidad de dicho volumen: "))
@@ -52,7 +62,12 @@ class CalculadoraFisica:
             print("Decilitro: {} [dL]".format(cantidad * 100))
             print("Litro: {} [lts]".format(cantidad / 10))
             print("Galon: {} [gal]".format(cantidad / 37.854))
+
+            calculadoraFisica1 = CalculadoraFisica(numero_ingresado=cantidad, tipo_dato_ingresado=tipo_dato01)
+            calculo_insertado = CalculadoraFisicaDAO.insertar(calculadoraFisica1)
+
             input("PRESIONE ENTER PARA CONTINUAR\n")
+            self.menuFisica()
 
         elif opcion == "3":
             cantidad = float(input("Digite la cantidad de dicho volumen: "))
@@ -64,7 +79,12 @@ class CalculadoraFisica:
             print("Decilitro: {} [dL]".format(cantidad * 100000))
             print("Litro: {} [lts]".format(cantidad * 1000))
             print("Galon: {} [gal]".format(cantidad / 3.785))
+
+            calculadoraFisica1 = CalculadoraFisica(numero_ingresado=cantidad, tipo_dato_ingresado=tipo_dato01)
+            calculo_insertado = CalculadoraFisicaDAO.insertar(calculadoraFisica1)
+
             input("PRESIONE ENTER PARA CONTINUAR\n")
+            self.menuFisica()
 
         elif opcion == "4":
             cantidad = float(input("Digite la cantidad de dicho volumen: "))
@@ -76,7 +96,12 @@ class CalculadoraFisica:
             print("Decilitro: {} [dL]".format(cantidad / 100))
             print("Litro: {} [lts]".format(cantidad / 1000))
             print("Galon: {} [gal]".format(cantidad / 3785))
+
+            calculadoraFisica1 = CalculadoraFisica(numero_ingresado=cantidad, tipo_dato_ingresado=tipo_dato01)
+            calculo_insertado = CalculadoraFisicaDAO.insertar(calculadoraFisica1)
+
             input("PRESIONE ENTER PARA CONTINUAR\n")
+            self.menuFisica()
 
         elif opcion == "5":
             cantidad = float(input("Digite la cantidad de dicho volumen: "))
@@ -88,7 +113,12 @@ class CalculadoraFisica:
             print("Mililitro: {} [mL]".format(cantidad * 100))
             print("Litro: {} [lts]".format(cantidad / 10))
             print("Galon: {} [gal]".format(cantidad / 37.854))
+
+            calculadoraFisica1 = CalculadoraFisica(numero_ingresado=cantidad, tipo_dato_ingresado=tipo_dato01)
+            calculo_insertado = CalculadoraFisicaDAO.insertar(calculadoraFisica1)
+
             input("PRESIONE ENTER PARA CONTINUAR\n")
+            self.menuFisica()
 
         elif opcion == "6":
             cantidad = float(input("Digite la cantidad de dicho volumen: "))
@@ -100,7 +130,12 @@ class CalculadoraFisica:
             print("Mililitro: {} [mL]".format(cantidad * 1000))
             print("Decilitro: {} [dL]".format(cantidad * 100))
             print("Galon: {} [gal]".format(cantidad / 3.785))
+
+            calculadoraFisica1 = CalculadoraFisica(numero_ingresado=cantidad, tipo_dato_ingresado=tipo_dato01)
+            calculo_insertado = CalculadoraFisicaDAO.insertar(calculadoraFisica1)
+
             input("PRESIONE ENTER PARA CONTINUAR\n")
+            self.menuFisica()
 
         elif opcion == "7":
             cantidad = float(input("Digite la cantidad de dicho volumen: "))
@@ -112,15 +147,23 @@ class CalculadoraFisica:
             print("Mililitro: {} [mL]".format(cantidad * 3785))
             print("Decilitro: {} [dL]".format(cantidad * 378.5))
             print("Litro: {} [lts]".format(cantidad * 3.785))
+
+            calculadoraFisica1 = CalculadoraFisica(numero_ingresado=cantidad, tipo_dato_ingresado=tipo_dato01)
+            calculo_insertado = CalculadoraFisicaDAO.insertar(calculadoraFisica1)
+
             input("PRESIONE ENTER PARA CONTINUAR\n")
+            self.menuFisica()
 
         elif opcion == "8":
             self.menuFisica()
 
         else:
             print("Opción inválida. Por favor, seleccione una opción válida.")
-            self.cVolumen(entrada)
+            self.menuFisica()
+
+
     def cArea(self, entrada):
+        tipo_dato02 = "Volumen"
         opcion = input("ELIJA EL AREA INICIAL\n"
                         + "\n"
                         + "1: CENTIMETRO CUADRADO [cm2]\n"
@@ -147,7 +190,12 @@ class CalculadoraFisica:
                   + "Milla cuadrado: " + str(cantidad / (2.59 * (10 ** 10))) + " [MI2]\n"
                   + "Hectárea: " + str(cantidad / (10 ** 8)) + " [ha]\n"
                     + "\n")
+
+            calculadoraFisica1 = CalculadoraFisica(numero_ingresado=cantidad, tipo_dato_ingresado=tipo_dato02)
+            calculo_insertado = CalculadoraFisicaDAO.insertar(calculadoraFisica1)
+
             input("PRESIONE ENTER PARA CONTINUAR\n")
+            self.menuFisica()
 
         elif opcion == "2":
             cantidad = float(input("Digite la cantidad de dicho area: "))
@@ -162,7 +210,12 @@ class CalculadoraFisica:
                   + "Milla cuadrado: " + str(cantidad / (2.59 * (10 ** 8))) + " [MI2]\n"
                   + "Hectárea: " + str(cantidad / (10 ** 6)) + " [ha]\n"
                     + "\n")
+
+            calculadoraFisica1 = CalculadoraFisica(numero_ingresado=cantidad, tipo_dato_ingresado=tipo_dato02)
+            calculo_insertado = CalculadoraFisicaDAO.insertar(calculadoraFisica1)
+
             input("PRESIONE ENTER PARA CONTINUAR\n")
+            self.menuFisica()
 
         elif opcion == "3":
             cantidad = float(input("Digite la cantidad de dicho area: "))
@@ -177,7 +230,12 @@ class CalculadoraFisica:
                   + "Milla cuadrado: " + str(cantidad / (2.59 * (10 ** 6))) + " [MI2]\n"
                     + "Hectárea: " + str(cantidad / 10000) + " [ha]\n"
                     + "\n")
+
+            calculadoraFisica1 = CalculadoraFisica(numero_ingresado=cantidad, tipo_dato_ingresado=tipo_dato02)
+            calculo_insertado = CalculadoraFisicaDAO.insertar(calculadoraFisica1)
+
             input("PRESIONE ENTER PARA CONTINUAR\n")
+            self.menuFisica()
 
         elif opcion == "4":
             cantidad = float(input("Digite la cantidad de dicho area: "))
@@ -192,7 +250,12 @@ class CalculadoraFisica:
                   + "Milla cuadrado: " + str(cantidad / (2.59 * (10 ** 12))) + " [MI2]\n"
                   + "Hectárea: " + str(cantidad / (10 ** 10)) + " [ha]\n"
                     + "\n")
+
+            calculadoraFisica1 = CalculadoraFisica(numero_ingresado=cantidad, tipo_dato_ingresado=tipo_dato02)
+            calculo_insertado = CalculadoraFisicaDAO.insertar(calculadoraFisica1)
+
             input("PRESIONE ENTER PARA CONTINUAR\n")
+            self.menuFisica()
 
         elif opcion == "5":
             cantidad = float(input("Digite la cantidad de dicho area: "))
@@ -207,7 +270,12 @@ class CalculadoraFisica:
                     + "Milla cuadrado: " + str(cantidad / 2.59) + " [MI2]\n"
                   + "Hectárea: " + str(cantidad * 100) + " [ha]\n"
                     + "\n")
+
+            calculadoraFisica1 = CalculadoraFisica(numero_ingresado=cantidad, tipo_dato_ingresado=tipo_dato02)
+            calculo_insertado = CalculadoraFisicaDAO.insertar(calculadoraFisica1)
+
             input("PRESIONE ENTER PARA CONTINUAR\n")
+            self.menuFisica()
 
         elif opcion == "6":
             cantidad = float(input("Digite la cantidad de dicho area: "))
@@ -222,7 +290,13 @@ class CalculadoraFisica:
                   + "Kilometro cuadrado: " + str(cantidad * 2.59) + " [km2]\n"
                   + "Hectárea: " + str(cantidad * 259) + " [ha]\n"
                     + "\n")
+
+            calculadoraFisica1 = CalculadoraFisica(numero_ingresado=cantidad, tipo_dato_ingresado=tipo_dato02)
+            calculo_insertado = CalculadoraFisicaDAO.insertar(calculadoraFisica1)
+
             input("PRESIONE ENTER PARA CONTINUAR\n")
+            self.menuFisica()
+
 
         elif opcion == "7":
             cantidad = float(input("Digite la cantidad de dicho area: "))
@@ -237,16 +311,22 @@ class CalculadoraFisica:
                   + "Milimetro cuadrado: " + str(cantidad * (10 ** 10)) + " [mm^2]\n"
                     + "Kilometro cuadrado: " + str(cantidad / 100) + " [km^2]\n"
                     + "\n")
+
+            calculadoraFisica1 = CalculadoraFisica(numero_ingresado=cantidad, tipo_dato_ingresado=tipo_dato02)
+            calculo_insertado = CalculadoraFisicaDAO.insertar(calculadoraFisica1)
+
             input("PRESIONE ENTER PARA CONTINUAR\n")
+            self.menuFisica()
+
         elif opcion == "8":
             self.menuFisica()
         else:
             print("Opción inválida. Por favor, seleccione una opción válida.")
-            CalculadoraFisica.cArea(entrada)
-        self.menuFisica()
+            self.menuFisica()
 
 
     def cTemperatura(self, entrada):
+        tipo_dato03 = "Temperatura"
         opcion = input("-----------------------------------\n"
                     + "ELIJA LA TEMPERATURA INICIAL\n-----------------------------------\n"
                     + "\n"
@@ -265,7 +345,12 @@ class CalculadoraFisica:
                 + "Celsius: ", (temperatura - 273.15), " [ºC]\n"
                 + "Fahrenheit: ", (temperatura - 273.15) * 9/5 + 32, " [ºF]\n"
                 + "\n")
+
+            calculadoraFisica1 = CalculadoraFisica(numero_ingresado=temperatura, tipo_dato_ingresado=tipo_dato03)
+            calculo_insertado = CalculadoraFisicaDAO.insertar(calculadoraFisica1)
+
             input("PRESIONE ENTER PARA CONTINUAR\n")
+            self.menuFisica()
 
 
         elif opcion == "2":
@@ -277,7 +362,11 @@ class CalculadoraFisica:
                 + "Kelvin: ", (temperatura + 273.15), " [K]\n"
                 + "Fahrenheit: ", (temperatura * 9/5) + 32, " [ºF]\n"
                 + "\n")
+            calculadoraFisica1 = CalculadoraFisica(numero_ingresado=temperatura, tipo_dato_ingresado=tipo_dato03)
+            calculo_insertado = CalculadoraFisicaDAO.insertar(calculadoraFisica1)
+
             input("PRESIONE ENTER PARA CONTINUAR\n")
+            self.menuFisica()
 
 
         elif opcion == "3":
@@ -289,17 +378,21 @@ class CalculadoraFisica:
                 + "Kelvin: ", ((temperatura - 32) * 5/9 + 273.15), " [K]\n"
                 + "Celcius: ", ((temperatura - 32) * 5/9), " [ºC]\n"
                 + "\n")
+
+            calculadoraFisica1 = CalculadoraFisica(numero_ingresado=temperatura, tipo_dato_ingresado=tipo_dato03)
+            calculo_insertado = CalculadoraFisicaDAO.insertar(calculadoraFisica1)
+
             input("PRESIONE ENTER PARA CONTINUAR\n")
+            self.menuFisica()
 
 
         elif opcion == "4":
             self.menuFisica()
         else:
             print("Opción inválida. Por favor, seleccione una opción válida.")
-            self.cTemperatura(entrada)
-        self.menuFisica()
+            self.menuFisica()
 
 
 
 calculadora = CalculadoraFisica()
-calculadora.menuFisica()
+# calculadora.menuFisica()

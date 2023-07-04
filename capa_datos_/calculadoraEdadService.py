@@ -1,27 +1,40 @@
 from datetime import date
 
+from capa_datos_.calculadoraEdad import CalculadoraEdad
+from capa_datos_.calculadoraEdadDao import CalculadoraEdadDAO
 
-class CalculadoraEdadService:   # Creamos la clase
-    def __init__(self):
-        self.nombre_apellido = ""
-        self.dia = 0
-        self.mes = 0
-        self.anio = 0
 
+class CalculadoraEdadService:
     # Menu
-    def menuCalculadoraEdad(self):
-        print("Calculadora de Edad")
+    def menuEdad(self):
+        from capa_datos_.MenuPrincipal import MenuPrincipal  # Importación tardía
+        opcion = input("-----------------------------------\n"
+                            "MENU CALCULADORA EDAD\n-----------------------------------\n"
+                            "\n1: CALCULO ETARIO "
+                            "\n2: VOLVER AL MENÚ PRINCIPAL\n"
+                            "\n Seleccione una opcion: ")
+
+        if opcion == "1":
+            self.menuCalculoEdad()
+        if opcion == "2":
+            MenuPrincipal.menuPrincipal()
+
+    def menuCalculoEdad(self):
+        print("MENU CALCULADORA EDAD")
         print("--------------------")
-        self.nombre_apellido = input("Ingrese su nombre y apellido: ")
+
+        nombre_apellido = input("Ingrese su nombre y apellido: ")
         print("--------------------")
-        self.dia = int(input("Ingresa tu día de nacimiento: "))
-        self.mes = int(input("Ingresa tu mes de nacimiento: "))
-        self.anio = int(input("Ingresa tu año de nacimiento: "))
+        dia = int(input("Ingresa tu día de nacimiento: "))
+        mes = int(input("Ingresa tu mes de nacimiento: "))
+        anio = int(input("Ingresa tu año de nacimiento: "))
+
+        self.calcular_edad(nombre_apellido, dia, mes, anio)
 
     # Metodo para calcular la edad
-    def calcular_edad(self):
+    def calcular_edad(self,nombre_apellido,dd,mm,aa):
         hoy = date.today()   # Se usa datetime para identificar la fecha actual
-        fecha_nacimiento = date(self.anio, self.mes, self.dia)
+        fecha_nacimiento = date(aa, mm, dd)
         edad = hoy.year - fecha_nacimiento.year
 
         # Verificamos si el cumpleaños ya ha pasado este año
@@ -63,20 +76,28 @@ class CalculadoraEdadService:   # Creamos la clase
             cumpleanios_proximo_anio = fecha_nacimiento.replace(year=hoy.year + 1)   # Se reemplaza el año y se agrega 1
             dias_restantes = (cumpleanios_proximo_anio - hoy).days
 
-        return edad, meses, dias, dias_restantes
+        return self.mostrar_resultado(nombre_apellido, edad, meses, dias, dias_restantes,dd,mm,aa)
 
     # Para mostrar el resultado del cálculo
-    def mostrar_resultado(self, edad, meses, dias, dias_restantes):
+    def mostrar_resultado(self,nombre_apellido, edad, meses, dias, dias_restantes,dd,mm,aa):
         if dias_restantes == 0:   #
-            print(f"\n¡Feliz cumpleaños, {self.nombre_apellido}!")
+            print(f"\n¡Feliz cumpleaños, {nombre_apellido}!")
             print(f"¡Hoy cumpliste {edad} años!")
+
+            calculadora_edad01 = CalculadoraEdad(nombre_apellido=nombre_apellido, dia_nac=dd, mes_nac=mm, ano_nac=aa, edad_actual=edad)
+            CalculadoraEdadDAO.insertar(calculadora_edad01)
+
+            input("PRESIONE ENTER PARA CONTINUAR\n")
+            self.menuEdad()
+
         else:
             edad_actual = f"{edad} años, {meses} meses, {dias} dias."
             # print("edad actual en string" + edad_actual)
             print(f"\nTu edad es: {edad} años, {meses} meses y {dias} días.")
             print(f"Faltan {dias_restantes} días para tu próximo cumpleaños.")
 
-    def ingresar_datos(self):
-        self.menuCalculadoraEdad()
-        edad, meses, dias, dias_restantes = self.calcular_edad()
-        self.mostrar_resultado(edad, meses, dias, dias_restantes)
+            calculadora_edad01 = CalculadoraEdad(nombre_apellido=nombre_apellido, dia_nac=dd, mes_nac=mm, ano_nac=aa, edad_actual=edad_actual)
+            CalculadoraEdadDAO.insertar(calculadora_edad01)
+
+            input("PRESIONE ENTER PARA CONTINUAR\n")
+            self.menuEdad()

@@ -12,17 +12,28 @@ class CalculadoraFisicaDAO:
         with CursorDelPool() as cursor:
             cursor.execute(cls._SELECCIONAR)
             registros = cursor.fetchall()
-            calculadoras_fisicas = []
+            calculos_fisica = []
             for registro in registros:
-                calculo = CalculadoraFisica(registro[0], registro[1], registro[2])
-                calculadoras_fisicas.append(calculo)
-            return calculadoras_fisicas
+                calculo_fisica = CalculadoraFisica(registro[0], registro[1], registro[2])
+                calculos_fisica.append(calculo_fisica)
+            return calculos_fisica
 
 
     @classmethod
-    def insertar(cls, calculadoras_fisicas):
+    def insertar(cls, calculoFisica):
         with CursorDelPool() as cursor:
-            valores = (calculadoras_fisicas.numero_ingresado, calculadoras_fisicas.tipo_dato_ingresado)
+            valores = (calculoFisica.numero_ingresado, calculoFisica.tipo_dato_ingresado)
             cursor.execute(cls._INSERTAR, valores)
-            # log.debug(f'Calculo Fisico Insertado: {calculadoras_fisicas}')
+            log.debug(f'Calculo Fisico Insertado: {calculoFisica}')
             return cursor.rowcount
+
+# if __name__ == '__main__':
+    # calculadoraFisica1 = CalculadoraFisica(numero_ingresado=895, tipo_dato_ingresado="CTMR")
+    # calculo_insertado = CalculadoraFisicaDAO.insertar(calculadoraFisica1)
+    # log.debug(f"Calculo ingresado: {calculo_insertado}")
+
+    # log.debug(f"Calculo ingresado: {calculos_insertados}")
+
+    # calculos_fisica = CalculadoraFisicaDAO.seleccionar()
+    # for calculo_fisica in calculos_fisica:
+    #     log.debug(calculo_fisica)

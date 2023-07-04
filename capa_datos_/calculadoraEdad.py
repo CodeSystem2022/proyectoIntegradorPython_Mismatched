@@ -2,22 +2,22 @@ from logger_base import log
 
 
 class CalculadoraEdad:
-    def __init__(self, id_calculo_edad=None, nombre_apellido=None, diaNac=None, mesNac=None, añoNac=None,
+    def __init__(self, id_calculo_edad=None, nombre_apellido=None, dia_nac=None, mes_nac=None, ano_nac=None,
                  edad_actual=None):
         self._id_calculo_edad = id_calculo_edad
         self._nombre_apellido = nombre_apellido
-        self._diaNac = diaNac
-        self._mesNac = mesNac
-        self._añoNac = añoNac
+        self._dia_nac = dia_nac
+        self._mes_nac = mes_nac
+        self._ano_nac = ano_nac
         self._edad_actual = edad_actual
 
     def __str__(self):
         return f'''
         id_calculo_edad: {self._id_calculo_edad}
         nombre_apellido: {self._nombre_apellido}
-        diaNac:          {self._diaNac}
-        mesNac:          {self._mesNac}
-        añoNac:          {self._añoNac}
+        diaNac:          {self._dia_nac}
+        mesNac:          {self._mes_nac}
+        anioNac:          {self._ano_nac}
         edad_actual:     {self._edad_actual}
         '''
 
@@ -39,28 +39,28 @@ class CalculadoraEdad:
         self._nombre_apellido = nombre_apellido
 
     @property
-    def diaNac(self):
-        return self._diaNac
+    def dia_nac(self):
+        return self._dia_nac
 
-    @diaNac.setter
-    def diaNac(self, diaNac):
-        self._diaNac = diaNac
-
-    @property
-    def mesNac(self):
-        return self._mesNac
-
-    @mesNac.setter
-    def mesNac(self, mesNac):
-        self._mesNac = mesNac
+    @dia_nac.setter
+    def dia_nac(self, dia_nac):
+        self._dia_nac = dia_nac
 
     @property
-    def añoNac(self):
-        return self._añoNac
+    def mes_nac(self):
+        return self._mes_nac
 
-    @añoNac.setter
-    def añoNac(self, añoNac):
-        self._añoNac = añoNac
+    @mes_nac.setter
+    def mes_nac(self, mes_nac):
+        self._mes_nac = mes_nac
+
+    @property
+    def ano_nac(self):
+        return self._ano_nac
+
+    @ano_nac.setter
+    def ano_nac(self, ano_nac):
+        self._ano_nac = ano_nac
 
     @property
     def edad_actual(self):
@@ -71,6 +71,6 @@ class CalculadoraEdad:
         self._edad_actual = edad_actual
 
 
-if __name__ == '__main__':
-    calculadoraEdad1 = CalculadoraEdad(0, "Santiago Martos", 6, 2, 2003, edad_actual=f"20 años, 7 meses, 15 dias, ")
-    log.debug(calculadoraEdad1)
+# if __name__ == '__main__':
+#     calculadoraEdad1 = CalculadoraEdad(0, "Santiago Martos", 6, 2, 2003, edad_actual=f"20 años, 7 meses, 15 dias, ")
+#     log.debug(calculadoraEdad1)
