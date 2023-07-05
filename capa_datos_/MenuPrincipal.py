@@ -15,8 +15,7 @@ class MenuPrincipal:
                        + "1: CALCULADORA REGULAR\n"
                        + "2: CALCULADORA DE FISICA\n"
                        + "3: CALCULADORA DE EDAD\n"
-                       + "4: CALCULADORA DE MATRICES\n"
-                       + "5: APAGAR\n")
+                       + "4: APAGAR\n")
 
         if opcion == "1":
             cr.calcular_operaciones()
@@ -24,9 +23,7 @@ class MenuPrincipal:
             cf.menuFisica()
         elif opcion == "3":
             ce.menuEdad()
-        # elif opcion == "4":
-        #     cm.menuMatrices()
-        elif opcion == "5":
+        elif opcion == "4":
             import sys
             sys.exit(0)
 
